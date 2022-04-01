@@ -1,6 +1,13 @@
 
 Jesus Heals Physiotherapy
 
+Team: 
+- Ashish Sharma - Full Stack
+- Lalit Kishore Upadhyay - Full Stack
+- Rupesh Saini - Devops
+
+
+
 The Problem
 A specific application of physiotherapy is that joint movement may get limited through muscle atrophy, surgery, accident, stroke or other causes. Reportedly, up to 70% of patients give up physiotherapy too early — often because they cannot see the progress. Automated tracking of ROM via a mobile app could help patients reach their physiotherapy goals.
 
@@ -35,11 +42,25 @@ On the back-end, tech used:
 - Express
 - JWT
 
+Deployment
+- AWS
+- EC2
+- Docker
+
 
 Infra/Cloud
 The back-end was hosted on AWS EC2.
 
 Screenshots of the app:
+
+- Home page
+-- ![image](https://user-images.githubusercontent.com/74248496/161190327-ce39ac5e-0c08-4de7-90dd-5c9a0e2d3725.png)
+
+- Book Appointment
+-- ![image](https://user-images.githubusercontent.com/74248496/161190361-f291887f-a47b-4855-ad21-819bde6e0941.png)
+
+- The doctor
+-- ![image](https://user-images.githubusercontent.com/74248496/161190441-9be126f2-d30b-4e51-abb5-411fca610e7e.png)
 
 
 
