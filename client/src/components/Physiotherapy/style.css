@@ -1,0 +1,42 @@
+.una {
+    text-align: center;
+    display: block;
+    line-height: 1px;
+    height: 2px;
+    margin: 2rem 0;
+    background: #042930;
+  }
+  .una:before, .una:after {
+    content: '\2021';
+    font-size: 3rem;
+    color: #042930;
+    position: absolute;
+    transform: rotate(90deg);
+  }
+  .una:before {
+    left:0;
+  }
+  .una:after {
+    right: 0;
+  }
+
+  .flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+    width: 100%;
+}  
+
+.flex-child:first-child {
+    margin-right: -250px;
+} 
+ul {
+  list-style: none;
+}
+ul li::before {
+  content: "✅";
+  display: inline-block;
+  margin-right: 0.2rem;
+}

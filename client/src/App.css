@@ -1,0 +1,17 @@
+.App {
+  /* background-image: url('https://media.istockphoto.com/photos/heart-clouds-over-cross-picture-id1341512268?b=1&k=20&m=1341512268&s=170667a&w=0&h=mewlZOYTddKa6QJXX5pbseXXj09ErcdaokJ3G3USvaE='); */
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: 'Gotham';
+  font-style: normal;
+  background-color: aliceblue;
+  font-weight: 400;
+  src: local('Gotham'), url('./assets/fonts/Gotham.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gotham';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gotham'), url('./assets/fonts/Gotham.ttf') format('truetype');
+}

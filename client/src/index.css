@@ -1,0 +1,4 @@
+@font-face {
+  font-family: 'Gotham';
+  src: local('Gotham'), url('./assets/fonts/Gotham.ttf') format('truetype');
+}
