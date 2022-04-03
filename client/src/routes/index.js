@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { WebRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import AboutUs from "../pages/AboutUs";
 import Login  from "../components/signUp_Login/Login";
@@ -12,7 +12,8 @@ import { LoaderDiv } from "../components/Physiotherapy/Physio.style";
 import { Row } from "react-bootstrap";
 import Gif from "../components/images/gif3.gif";
 import { connect } from "react-redux";
-
+import AllRouter from './router'
+import {SignUp_Login} from '../components/signUp_Login/index'
 function Routing({ isLoading }) {
   return (
     <Row>
@@ -25,15 +26,18 @@ function Routing({ isLoading }) {
       <Route exact path="/" element={<Home />} />
       <Route exact path="/aboutus" element={<AboutUs />} />
       <Route exact path="/contactus" element={<ContactUs />} />
-      <Route exact path="/login" element={<Login />} />
-      <Route exact path="/signup" element={<SignUp />} />
+      {/* <Route exact path="/login" element={<Login />} /> */}
+      {/* <Route exact path="/signup" element={<SignUp />} /> */}
+      <Route exact path="/login" element={<SignUp_Login />}/>
       <Route exact path="/physio" element={<Physio />} />
       <Route exact path="/diet" element={<Diet />} />
       <Route exact path="/book" element={<Calendar />} />
+      
     </Routes>
     </Row>
   );
 }
+
 const mapStateToProps = (state) => ({
   isLoading: state.loader.isLoading,
 });
