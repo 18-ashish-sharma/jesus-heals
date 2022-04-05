@@ -3,7 +3,6 @@ Jesus Heals Physiotherapy
 
 Team: 
 - Ashish Sharma - Full Stack
-- Lalit Kishore Upadhyay - Full Stack
 - Rupesh Saini - Devops
 
 
