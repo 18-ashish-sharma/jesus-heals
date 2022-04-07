@@ -1,3 +1,3 @@
 module.exports = {
-    secret: "prashansa-secret-key"
-  };
+  secret: "prashansa-secret-key",
+};
