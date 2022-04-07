@@ -135,6 +135,7 @@ export default function Appointment() {
     dispatch({ type: "bookTimeSlot" });
     dispatch({ type: "closeReviewingModal" });
   }
+  
   return (
     <>
       <Row>

@@ -34,6 +34,7 @@ export const PhyHeading = styled.h1`
   color: #000000;
   font-weight: normal;
   margin: 15px;
+  margin-top: 100px;
 `;
 
 export const Col = styled.div`

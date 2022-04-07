@@ -35,10 +35,11 @@ export const login = (url, payload) => (dispatch) => {
   setTimeout(() => {
     postApi(url, payload, msg)
       .then((res) => {
-        dispatch(loginSuccess(res.data.data));
+        // console.log(res.data);
+        dispatch(loginSuccess(res.data));
       })
       .catch((err) => dispatch(LoginFailure(err)));
-  }, 3000);
+  }, 0);
 };
 
 export const signUpSuccess = (payload) => ({

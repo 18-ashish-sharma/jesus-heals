@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { login } from '../../redux/actions';
 import { connect } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = ({ login }) => {
+  const navigate = useNavigate();
   const [state, setState] = useState({
     email: "",
     password: "",
@@ -19,7 +21,9 @@ const LoginPage = ({ login }) => {
     event.preventDefault();
     const url = "http://localhost:8080/api/auth/signin"
     login(url, state)
-    console.log(state);
+    setTimeout(() => {
+      navigate('/')
+    }, 1000);
   };
   return (
     <>
