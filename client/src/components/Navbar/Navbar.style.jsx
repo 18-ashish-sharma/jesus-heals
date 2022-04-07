@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const NavContainer = styled.div`
   box-shadow: 0px 5px 10px 0px #0000000d;
@@ -12,13 +12,10 @@ export const NavLink = styled.div`
   display: grid;
   place-content: center;
   height: 100%;
-  font-size: ${(props) => props.theme.fonts.font_size.normal_font};
   font-weight: bold;
-  color: ${(props) => (props.active
-    ? props.theme.colors.primary_grey_darkest
-    : props.theme.colors.primary_grey_darker)};
+  color: ${(props) => (props.active ? "blue" : "black")};
   padding-right: ${(props) => props.pr}px;
-  font-weight: ${(props) => (props.active ? '800' : '400')};
+  font-weight: ${(props) => (props.active ? "800" : "400")};
   background-color: white;
   cursor: pointer;
 `;
@@ -53,14 +50,13 @@ export const NavWrapper = styled.div`
   margin: auto;
 `;
 
-
 export const FlexWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Para = styled.div`
-  font-size: ${(props) => props.fontSize || '14px'};
+  font-size: ${(props) => props.fontSize || "14px"};
   position: relative;
   text-align: ${(props) => props.textAlign};
   margin: 0;
@@ -71,7 +67,7 @@ export const Para = styled.div`
   padding-bottom: ${(props) => props.pb}px;
   padding-right: ${(props) => props.pr}px;
   padding-left: ${(props) => props.pl}px;
-  line-height: ${(props) => props.lineHeight || '16'}px;
+  line-height: ${(props) => props.lineHeight || "16"}px;
   color: ${(props) => props.color};
   background-color: ${(props) => props.backgroundColor};
 `;
@@ -80,5 +76,12 @@ export const Icon = styled.div`
   width: 29;
   height: 30;
   fill: none;
+`;
 
+export const LogoImage = styled.div`
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -6px;
 `;

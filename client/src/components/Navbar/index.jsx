@@ -1,18 +1,25 @@
 import React from "react";
-import { Nav, Navbar } from "react-bootstrap";
+import { Image, Nav, Navbar } from "react-bootstrap";
 import {
-  FlexWrapper,
   Icon,
+  LogoImage,
   NavContainer,
   NavWrapper,
   Para,
 } from "./Navbar.style";
 import Plogo from "../images/cut.ico";
+import { connect } from "react-redux";
+import CompliancePopup from "../PopUp";
 
-export default function Navbar1({ isLoggedIn }) {
+function Navbar1({ isLoggedIn, userData }) {
+  function logout() {
+    localStorage.clear();
+    window.location.href = '/';
+}
+console.log(userData);
   return (
     <NavContainer>
-      <Navbar collapseOnSelect expand="lg">
+      <Navbar fixed="" collapseOnSelect expand="lg">
         <Navbar.Brand href="#home">
           {/* <Logo /> */}
           <Icon>
@@ -40,16 +47,20 @@ export default function Navbar1({ isLoggedIn }) {
               {isLoggedIn && (
                 <>
                   <Nav.Link eventKey={2} href="#memes">
-                    Pic
+                    <CompliancePopup>
+                      <LogoImage>
+                        <Image
+                          thumbnail
+                          src="https://www.shaadidukaan.com/vogue/wp-content/uploads/2019/08/hug-kiss-images.jpg"
+                          alt="sorry"
+                        />
+                      </LogoImage>
+                    </CompliancePopup>
                   </Nav.Link>
                   <Nav.Link eventKey={2} href="#memes">
-                    <FlexWrapper>
-                      <Para>James Brown</Para>
-                      <Para pl={10} color="#D71638">
-                        Data Excecutive
-                      </Para>
-                    </FlexWrapper>
+                    <Para pt={4}>{userData.username}</Para>
                   </Nav.Link>
+                  <Nav.Link onClick={logout}>Logout</Nav.Link>
                 </>
               )}
             </Nav>
@@ -59,3 +70,8 @@ export default function Navbar1({ isLoggedIn }) {
     </NavContainer>
   );
 }
+const mapStateToProps = (state) => ({
+  isLoggedIn: state.loader.isLoggedIn,
+  userData: state.loader.userData,
+});
+export default connect(mapStateToProps, null)(Navbar1);

@@ -9,7 +9,8 @@ import {
 
 const initialState = {
   isLoading: false,
-  data: {},
+  isLoggedIn: false,
+  userData: [],
 };
 
 const tasks = (state = initialState, action) => {
@@ -28,8 +29,9 @@ const tasks = (state = initialState, action) => {
     case LOGIN_SUCCESS:
       return {
         ...state,
-        data: payload,
+        userData: payload,
         isLoading: false,
+        isLoggedIn: true,
       };
     case LOGIN_FAIL:
       return {
@@ -39,8 +41,9 @@ const tasks = (state = initialState, action) => {
     case SIGNUP_SUCCESS:
       return {
         ...state,
-        lisdatatData: payload,
+        userData: payload,
         isLoading: false,
+        isLoggedIn: true,
       };
     case SIGNUP_FAIL:
       return {
